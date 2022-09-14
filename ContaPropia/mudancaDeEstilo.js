@@ -5,19 +5,22 @@ function criaElemento(){
 
    for(let i = 0; i < 3; i++){
       let div = document.createElement('div');
-      div.style="height: 100px; width: 100px; background-color: red;";
+      div.style="height: 100px; width: 100px; background-color: red; margin:5px";
       principal.appendChild(div);
    }
-   document.querySelector('body').appendChild(principal)
+   document.querySelector('body').appendChild(principal);
 
 
    principal.addEventListener('click', function(){                //nao cheguei uma conclusao
-      //virar de row pra column
+      //virar de row pra column e collumn pra row
+      console.log('flex direction ',(principal.style).hasAttribute('flex-direction'));
+      console.log('style ',principal.hasAttribute('style'));
       if(principal.hasAttribute('flex-direction: row')){
-         principal.style = 'flex-direction: column;'
+         console.log('é row')
+         principal.style = 'display: flex; flex-direction: column;'
       }else{
-         principal.style = 'flex-direction: row;'
-         console.log('oporra')
+         principal.style = 'display: flex; flex-direction: row;'
+         console.log('oporra, nao é row')
       }
    }
    ); 

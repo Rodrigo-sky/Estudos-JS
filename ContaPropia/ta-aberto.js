@@ -1,8 +1,8 @@
 function abre(){
    var abertos = document.createElement('p');                     //document.createElement() cria um elemento de terminada tag
    abertos.innerText = 'Estamos Abertos pra bosta nenhuma!'       //inner.text = vai inserir um texto na tag
-   let insercao = document.querySelector('body');
-   insercao.appendChild(abertos);                                 //feito o append para o corpo atraves do querySelector
+   let getBody = document.querySelector('body');
+   getBody.appendChild(abertos);                                 //feito o append para o corpo atraves do querySelector
 
    
    // var butao = document.querySelector('#xuxu')                 //busca a id xuxu
